@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import "./App.css";
 
 const apiURL = "https://notes-backend-161w.onrender.com/notes/";
 
