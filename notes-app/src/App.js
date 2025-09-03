@@ -54,7 +54,7 @@ function App() {
 
   return (
     <div style={{ padding: 20 }}>
-      <h1>Simple Notes App</h1>
+      <h1>Notes App</h1>
       <input
         placeholder="Title"
         value={title}
