@@ -1,38 +1,146 @@
-.App {
-  text-align: center;
-}
+/* App.css */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* Background + Global */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 30px;
+  color: #333;
 }
 
-.App-link {
-  color: #61dafb;
+/* Container */
+.app-container {
+  width: 100%;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Heading */
+h1 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #2563eb;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Form Styling */
+.note-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+  transition: transform 0.2s ease;
+}
+
+.note-form:hover {
+  transform: scale(1.02);
+}
+
+.note-form input,
+.note-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.note-form input:focus,
+.note-form textarea:focus {
+  border-color: #2563eb;
+}
+
+.note-form button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #2563eb, #1e40af);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.note-form button:hover {
+  background: linear-gradient(90deg, #1e40af, #1d4ed8);
+  transform: translateY(-2px);
+}
+
+/* Notes Card */
+.note-card {
+  background: #fff;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.note-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.note-card h2 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  color: #111;
+}
+
+.note-card p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+/* Action Buttons */
+.note-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.note-actions button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.note-actions button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.delete-btn {
+  background: #ef4444;
+  color: #fff;
+}
+
+.edit-btn {
+  background: #f59e0b;
+  color: #fff;
+}
+
+.share-btn {
+  background: #10b981;
+  color: #fff;
 }
