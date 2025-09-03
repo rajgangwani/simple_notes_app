@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const apiURL = "http://127.0.0.1:8000/notes/";
+const apiURL = "https://notes-backend-161w.onrender.com/notes/";
 
 function App() {
   const [notes, setNotes] = useState([]);
